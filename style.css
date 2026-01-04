@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #151515, #050505);
+  color: #ffffff;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+}
+
+.logo img {
+  width: 60px;       /* adjust size here */
+  height: auto;      /* keeps ratio */
+}
+
+.menu a {
+  margin-left: 60px;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.menu a:hover {
+  color: #ff9f1c;
+}
+
+/* HERO */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.tag {
+  color: #ff9f1c;
+  font-size: 35px;
+  letter-spacing: 3px;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  line-height: 1.05;
+  margin: 20px 0;
+}
+
+.hero-text p {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+.btn {
+  padding: 14px 36px;
+  background: linear-gradient(135deg, #ff9f1c, #ff6f00);
+  color: black;
+  text-decoration: none;
+  border-radius: 40px;
+  font-weight: 600;
+}
+
+/* IMAGE */
+.hero-img {
+  flex: 1;
+  text-align: center;
+}
+
+.hero-img img {
+  max-width: 50%;
+  filter: drop-shadow(0px 40px 80px rgba(255,159,28,0.25));
+}
+.worked-with-box {
+  display: inline-block;
+  padding: 10px 30px;
+  background: linear-gradient(135deg, #ff9f1c, #ff6f00);
+  color: #000;
+  font-size: 20px;
+  font-weight: 800;              /* EXTRA BOLD */
+  letter-spacing: 0px;           /* Cinematic spacing */
+  text-transform: uppercase;     /* Strong look */
+  margin-bottom: 40px;
+  border-radius: 8px;
+}
+/* CLIENTS SECTION */
+.clients {
+  padding: 80px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+.clients h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+/* Slider container */
+.client-slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Track */
+.client-track {
+  display: flex;
+  flex-wrap: nowrap;        /* 🔥 THIS IS THE KEY */
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+/* Each logo */
+.client {
+  flex: 0 0 auto;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+}
+
+.client img {
+  width: 200px;
+  height: auto;
+  opacity: 1;
+  transition: 0.3s;
+  filter: rg(100%);
+}
+
+.client img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .client img {
+    width: 80px;
+  }
+
+  .client {
+    padding: 0 25px;
+  }
+}
+
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #ffffff;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 44px;
+  }
+
+  .nav {
+    padding: 20px;
+  }
+
+  .menu {
+    display: none;
+  }
+}
