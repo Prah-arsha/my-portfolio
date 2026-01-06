@@ -153,7 +153,7 @@ body {
   }
 }
 /* INSTAGRAM POSTER PAGE */
-.My-poster-works-box {
+.my-poster-works-box {
   display: inline-block;
   padding: 10px 30px;
   background: linear-gradient(135deg, #ff9f1c, #ff6f00);
@@ -213,7 +213,7 @@ body {
 /* HEADER */
 .insta-header {
   padding: 14px 16px;
-  font-size: 20px;
+  font-size: 2px;
   font-weight: 600;
   color: #111;                     /* TEXT VISIBLE */
   background: #ffffff;             /* WHITE HEADER */
