@@ -152,6 +152,112 @@ body {
     transform: translateX(-50%);
   }
 }
+/* INSTAGRAM POSTER PAGE */
+.My-poster-works-box {
+  display: inline-block;
+  padding: 10px 30px;
+  background: linear-gradient(135deg, #ff9f1c, #ff6f00);
+  color: #000;
+  font-size: 20px;
+  font-weight: 800;              /* EXTRA BOLD */
+  letter-spacing: 0px;           /* Cinematic spacing */
+  text-transform: uppercase;     /* Strong look */
+  margin-bottom: 40px;
+  border-radius: 8px;
+}
+
+.insta-works {
+  padding: 120px 60px;
+  background: radial-gradient(
+    circle at top,
+    #ff9f1c 0%,
+    #111 35%,
+    #000 100%
+  );
+}
+
+.insta-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.insta-title h1 {
+  font-size: 42px;
+  color: #111;
+}
+
+.insta-title p {
+  color: #ffffff;
+}
+
+/* GRID */
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+/* CARD */
+.insta-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 25px 40px rgba(255, 200, 0, 0.455);
+  transition: transform 0.4s ease;
+}
+
+.insta-card:hover {
+  transform: translateY(-10px);
+}
+
+/* HEADER */
+.insta-header {
+  padding: 14px 16px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;                     /* TEXT VISIBLE */
+  background: #ffffff;             /* WHITE HEADER */
+  border-bottom: 1px solid #eee;
+  font-family: "billabong", "Segoe Script", cursive;
+}
+
+/* IMAGE (1080 x 1080 ratio) */
+.insta-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* PERFECT 1080x1080 */
+  overflow: hidden;
+}
+
+.insta-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* FOOTER */
+.insta-footer {
+  padding: 14px;
+  font-size: 18px;
+  color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .insta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .insta-works {
+    padding: 60px 20px;
+  }
+
+  .insta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* MOBILE */
 @media (max-width: 768px) {
