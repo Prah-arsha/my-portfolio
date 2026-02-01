@@ -1,4 +1,6 @@
-/* RESET */
+/* =====================
+   RESET
+===================== */
 * {
   margin: 0;
   padding: 0;
@@ -6,32 +8,28 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* =====================
+   BODY (MATCH ABOUT PAGE)
+===================== */
 body {
-  background: #8c0606;
+  background: radial-gradient(circle at center, #0f3d2e, #000);
   color: #ffffff;
 }
 
-/* NAV */
-/* NAVBAR – TRANSPARENT */
+/* =====================
+   NAVBAR
+===================== */
 .nav {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   padding: 30px 60px;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   background: transparent;
   z-index: 10;
-}
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 60px;
 }
 
 .logo img {
@@ -41,61 +39,53 @@ body {
 .menu a {
   margin-left: 40px;
   text-decoration: none;
-  color: #ffffff;
+  color: #aaa;
   font-size: 15px;
+  transition: 0.3s;
 }
 
 .menu a:hover {
-  color: #b30000;
+  color: #2bdc90;
 }
 
-/* HERO */
+/* =====================
+   HERO
+===================== */
 .samurai-hero {
   min-height: 90vh;
   display: flex;
   align-items: center;
   padding: 0 60px;
 
-  /* BACKGROUND IMAGE */
   background-image: url("images/hero-bg.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-
   position: relative;
   overflow: hidden;
 }
 
-/* BRIGHTEN BACKGROUND IMAGE */
+/* Dark overlay */
 .samurai-hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.18); /* brightness boost */
-  z-index: 1;
+  background: rgba(0, 0, 0, 0.65);
 }
 
-/* KEEP CONTENT ABOVE OVERLAY */
 .samurai-hero > * {
   position: relative;
   z-index: 2;
 }
 
-/* BRIGHTEN HERO IMAGE */
-.hero-image img {
-  filter: brightness(1.35) contrast(1.1);
-}
-
-
+/* TEXT */
 .hero-content {
   flex: 1;
-  z-index: 2;
 }
 
 .hero-tag {
   font-size: 14px;
   letter-spacing: 3px;
-  color: #ffffff;
+  color: #2bdc90;
 }
 
 .hero-content h1 {
@@ -105,57 +95,59 @@ body {
 }
 
 .hero-content h1 span {
-  color: #ff0000;
+  color: #2bdc90;
 }
 
 .hero-desc {
-  color: #ffffff;
+  color: #ccc;
   margin-bottom: 40px;
 }
 
+/* BUTTON */
 .hero-btn {
   padding: 14px 36px;
-  border: 1px solid #ffffff;
-  color: #ffffff;
+  border: 1px solid #2bdc90;
+  color: #2bdc90;
   text-decoration: none;
   font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
 .hero-btn:hover {
-  background: #ffffff;
-  color: #fff;
+  background: #2bdc90;
+  color: #000;
+  box-shadow: 0 0 25px rgba(43, 220, 144, 0.6);
 }
 
 /* HERO IMAGE */
 .hero-image {
   flex: 1;
-  position: relative;
   text-align: center;
 }
 
 .hero-image img {
-  max-width: 0%;
-  z-index: 2;
-  position: relative;
+  max-width: 90%;
+  filter: brightness(1.1) contrast(1.05);
 }
 
-
-
-
-/* CLIENTS */
+/* =====================
+   WORKED WITH / CLIENTS
+===================== */
 .clients {
-  padding: 20px 0;
+  padding: 40px 0;
   text-align: center;
-  background: #4a0101;
+  background: #0d0d0d;
 }
 
 .worked-with-box {
   display: inline-block;
-  padding: 10px 20px;
-  background: #b30000;
-  color: #fff;
+  padding: 10px 24px;
+  background: #2bdc90;
+  color: #000;
   font-weight: 700;
-  margin-bottom: 5px;
+  border-radius: 6px;
+  margin-bottom: 20px;
 }
 
 .client-slider {
@@ -170,27 +162,145 @@ body {
 
 .client {
   padding: 0 50px;
+  display: flex;
+  align-items: center;
 }
 
 .client img {
-  width: 160px;
+  width: 150px;
+  filter: rgb(100%);
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.client img:hover {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 @keyframes scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+/* ===================================
+   POSTER MASONRY WALL (ABOUT THEME)
+=================================== */
 
-/* FOOTER */
-footer {
+.poster-page {
+  min-height: 100vh;
+  padding: 90px 50px;
+  background: radial-gradient(circle at center, #0f3d2e, #000);
+}
+
+/* HEADER */
+.poster-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.poster-header h1 {
+  font-size: 34px;
+  color: #2bdc90;
+  margin-bottom: 8px;
+}
+
+.poster-header p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* MASONRY LAYOUT */
+.masonry-grid {
+  column-count: 4;        /* columns like pinterest */
+  column-gap: 25px;
+  width: 90%;
+  margin: auto;
+}
+
+/* CARD */
+.poster-card {
+  break-inside: avoid;
+  margin-bottom: 25px;
   background: #111;
-  color: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(43, 220, 144, 0.12);
+  transition: 0.3s ease;
+}
+
+/* IMAGE 1080×1080 ratio */
+.poster-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;   /* ✅ 1080×1080 square */
+  object-fit: cover;
+  display: block;
+}
+
+/* HOVER EFFECT */
+.poster-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 0 40px rgba(43, 220, 144, 0.45);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 800px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .masonry-grid {
+    column-count: 1;
+  }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .cluster-grid {
+    grid-template-columns: 1fr;
+    width: 95%;
+  }
+
+  .poster-card.big {
+    grid-row: span 1;
+  }
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .cluster-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .poster-card.big {
+    grid-row: span 1;
+  }
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background: #000;
+  color: #aaa;
   text-align: center;
   padding: 30px;
   font-size: 13px;
 }
 
-/* RESPONSIVE */
+/* =====================
+   RESPONSIVE
+===================== */
 @media (max-width: 900px) {
   .samurai-hero {
     flex-direction: column;
@@ -204,119 +314,5 @@ footer {
 
   .menu {
     display: none;
-  }
-}
-* FORCE CLIENT LOGOS INTO ONE STRAIGHT LINE */
-.client-track {
-  align-items: center !important;
-}
-
-.client {
-  display: flex !important;
-  align-items: center !important;
-}
-
-.client img {
-  vertical-align: middle !important;
-  display: block !important;
-  margin: 0 auto !important;
-}
-/* POSTER PAGE */
-.poster-page {
-  min-height: 100vh;
-  padding: 80px 60px;
-  background: radial-gradient(circle at top, #1c2b34, #0d1115);
-}
-/* HEADER */
-.poster-header {
-  margin-bottom: 50px;
-}
-
-.poster-header h1 {
-  font-size: 28px;
-  color: #ffffff;
-  margin-bottom: 6px;
-}
-
-.poster-header p {
-  color: #9aa4ad;
-  font-size: 14px;
-}
-
-/* GRID – posters one beside another */
-.poster-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 28px;
-}
-/* POSTER PAGE TITLE BOX */
-.poster-header h1 {
-  display: inline-block;
-  padding: 10px 28px;
-  font-size: 24px;
-  font-weight: 700;
-  color: #ffffff;
-
-  background: linear-gradient(135deg, #ff9f1c, #ff6f00); /* box color */
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
-/* CENTER THE HEADER */
-.poster-header {
-  text-align: center;
-}
-
-
-/* CARD */
-.poster-card {
-  display: flex;
-  justify-content: center;
-}
-
-/* POSTER IMAGE CONTAINER (1080x1080 ratio) */
-.poster-img {
-  position: relative;
-  width: 360px;
-  aspect-ratio: 1 / 1;           /* ✅ PERFECT 1080×1080 */
-  border-radius: 14px;
-  overflow: hidden;
-  background: #000;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.65);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
-}
-
-/* BACKSIDE SHADOW / DEPTH */
-.poster-img::before {
-  content: "";
-  position: absolute;
-  inset: -12px;
-  background: rgba(0, 0, 0, 0.45);
-  filter: blur(30px);
-  z-index: -1;
-}
-
-/* IMAGE */
-.poster-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;             /* ✅ fills square perfectly */
-  display: block;
-  border-radius: 14px;
-}
-
-/* HOVER EFFECT */
-.poster-img:hover {
-  transform: translateY(-10px) scale(1.04);
-  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.85);
-}
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-  .poster-grid {
-    gap: 20px;
-  }
-
-  .poster-img {
-    width: 220px;
   }
 }

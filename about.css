@@ -209,4 +209,137 @@ body {
   color: #bbb;
   line-height: 1.6;
 }
+/* ===========================
+   WORK EXPERIENCE FINAL FIXED
+=========================== */
 
+/* SECTION */
+.work-exp-section {
+  padding: 120px 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* ---------- TITLE ---------- */
+.work-exp-title {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+/* underline centered */
+.work-exp-title::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 4px;
+  background: #2bdc90;
+  margin: 12px auto 0;
+  border-radius: 4px;
+}
+
+.work-exp-subtitle {
+  color: #aaa;
+  margin-bottom: 70px;
+}
+
+/* ===========================
+   GRID (cards BELOW title)
+=========================== */
+
+.work-exp-container {
+  display: grid;                  /* NOT flex */
+  grid-template-columns: repeat(3, 320px);
+  justify-content: center;        /* center grid horizontally */
+  gap: 30px;
+}
+
+/* ---------- CARD ---------- */
+.exp-card {
+  background: #111;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(43,220,144,0.15);
+  transition: 0.3s;
+  text-align: left;
+}
+
+.exp-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 45px rgba(43,220,144,0.35);
+}
+
+/* ---------- COLOR TOP ---------- */
+.exp-color {
+  height: 110px;
+  background: linear-gradient(135deg, var(--brand), #0f3d2e);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-color img{
+  width: 70%;          /* bigger size */
+  height: 70%;
+  object-fit: contain; /* keep proper ratio */
+  filter: none;        /* keep original colors */
+}
+
+/* ---------- INFO ---------- */
+.exp-info {
+  padding: 22px;
+}
+
+.exp-info h3 {
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.exp-info p {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.exp-info span {
+  font-size: 13px;
+  color: #2bdc90;
+}
+.work-exp-title{
+  text-align: center;
+  width: 100%;
+  display: block;
+  margin: 0 auto 30px;
+}
+/* FORCE title on top and cards below */
+.work-exp-container{
+  display: grid;
+  grid-template-columns: repeat(3, 320px); /* 3 cards side-by-side */
+  justify-content: center; /* center the whole row */
+  gap: 30px;
+}
+
+
+/* title center */
+.work-exp-title{
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+/* keep cards layout same */
+.exp-card{
+  width: 320px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 1000px) {
+  .work-exp-container {
+    grid-template-columns: repeat(2, 280px);
+  }
+}
+
+@media (max-width: 600px) {
+  .work-exp-container {
+    grid-template-columns: 1fr;
+  }
+}
